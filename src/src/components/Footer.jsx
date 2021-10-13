@@ -1,4 +1,5 @@
 import React from "react";
+import { GameStatus } from "./GameSession";
 const Messages = {
 	NEW: "You will have a few seconds to memorize the blue random cells",
 	CHALLENGE: "Remember these blue cells now",
@@ -7,15 +8,35 @@ const Messages = {
 	LOST: "Game Over",
 };
 
-function Footer({ gameStatus, startGame }) {
+function Footer({ gameStatus, startGame, countdown }) {
+	const buttonAreaContent = () => {
+		switch (gameStatus) {
+			case GameStatus.NEW:
+				return <button onClick={startGame}>Start Game</button>;
+			case GameStatus.CHALLENGE:
+			// fall-through
+			case GameStatus.PLAYING:
+				return countdown;
+			case GameStatus.WON:
+			// fall-through
+			case GameStatus.LOST: {
+				return (
+					<button
+						onClick={() => {
+							/* TODO */
+						}}
+					>
+						Play Again
+					</button>
+				);
+			}
+		}
+	};
+
 	return (
 		<>
 			<div className="message">{Messages[gameStatus]}</div>
-			<div className="button">
-				<button onClick={startGame} className="btn">
-					Start Game
-				</button>
-			</div>
+			<div className="button">{buttonAreaContent()}</div>
 		</>
 	);
 }

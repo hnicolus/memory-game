@@ -4,7 +4,7 @@ import utils from "../utils";
 
 const GameGenerator = () => {
 	const gridSize = 5;
-	const challengeSize = 6;
+	const challengeSize = 3;
 	const cellIds = utils.createArray(gridSize * gridSize);
 	const cellWidth = 100 / gridSize;
 	const challengeCellIds = utils.sampleArray(cellIds, challengeSize);
