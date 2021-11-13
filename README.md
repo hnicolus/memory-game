@@ -9,5 +9,5 @@ An Block Memory Game , built with Javascript, HTML,CSS and React
   
  ## Getting Started
   - navigate into the react Project
-  - open a terminal run `yarn` 
-  - to Run the project run `yarn start`
+  - open a terminal run `yarn` or `npm install`
+  - to Run the project run `yarn start` or `npm start`
