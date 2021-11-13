@@ -24,7 +24,9 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-
+    - run: git config --global user.email "nicolusmaluleke@gmail.com"
+    - run: git config --global user.name "hnicolus"
+      
     - run: npm install
       working-directory: './react'
     - run: npm run deploy
