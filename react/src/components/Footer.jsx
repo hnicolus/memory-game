@@ -15,10 +15,12 @@ function Footer({ gameStatus, startGame, countdown }) {
 				return <button onClick={startGame}>Start Game</button>;
 			case GameStatus.CHALLENGE:
 			// fall-through
+				break;
 			case GameStatus.PLAYING:
 				return countdown;
 			case GameStatus.WON:
 			// fall-through
+			break;
 			case GameStatus.LOST: {
 				return (
 					<button
