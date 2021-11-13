@@ -21,7 +21,8 @@ function GameSession({
 	maxWrongAttempts,
 	autoStart,
 	resetGame,
-	nextChallenge
+	nextChallenge,
+	currentLevel
 }) {
 	const [gameStatus, setGameStatus] = useState(autoStart ? GameStatus.CHALLENGE : GameStatus.NEW);
 	const [pickedCellIds, setPickedCellIds] = useState([]);
@@ -72,6 +73,9 @@ function GameSession({
 	}, [gameStatus, challengeSeconds]);
 	return (
 		<div className="game">
+			<div>
+				<h5> Level : {currentLevel}</h5>
+			</div>
 			<div className="grid">
 				{cellIds.map((cellId) => (
 					<Cell
