@@ -2,13 +2,13 @@ import React from "react";
 import { GameStatus } from "./GameSession";
 const Messages = {
 	NEW: "You will have a few seconds to memorize the blue random cells",
-	CHALLENGE: "Remember these blue cells now",
+	CHALLENGE: "Memorize these blue cells now",
 	PLAYING: "Which cells were blue?",
-	WON: "Victory!",
+	WON: "You Win!",
 	LOST: "Game Over",
 };
 
-function Footer({ gameStatus, startGame, countdown, resetGame,nextChallenge }) {
+function Footer({ gameStatus, startGame, countdown, resetGame, nextChallenge }) {
 	const buttonAreaContent = () => {
 		switch (gameStatus) {
 			case GameStatus.NEW:
