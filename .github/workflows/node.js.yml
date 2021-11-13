@@ -24,7 +24,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        cache-dependency-path: /opt/hostedtoolcache/node/16.13.0/x64
+
     - run: npm run deploy
       working-directory: './react'
