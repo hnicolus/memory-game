@@ -30,6 +30,8 @@ function Footer({ gameStatus, startGame, countdown }) {
 					</button>
 				);
 			}
+			default:
+				break;
 		}
 	};
 
