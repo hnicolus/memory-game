@@ -8,7 +8,7 @@ const Messages = {
 	LOST: "Game Over",
 };
 
-function Footer({ gameStatus, startGame, countdown, resetGame,nextChallenge }) {
+function Footer({ gameStatus, startGame, countdown, resetGame, nextChallenge }) {
 	const buttonAreaContent = () => {
 		switch (gameStatus) {
 			case GameStatus.NEW:
