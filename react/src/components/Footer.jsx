@@ -8,25 +8,27 @@ const Messages = {
 	LOST: "Game Over",
 };
 
-function Footer({ gameStatus, startGame, countdown }) {
+function Footer({ gameStatus, startGame, countdown, resetGame,nextChallenge }) {
 	const buttonAreaContent = () => {
 		switch (gameStatus) {
 			case GameStatus.NEW:
 				return <button onClick={startGame}>Start Game</button>;
 			case GameStatus.CHALLENGE:
-			// fall-through
 				break;
 			case GameStatus.PLAYING:
 				return countdown;
 			case GameStatus.WON:
-			// fall-through
-			break;
+				return (
+					<button
+						onClick={nextChallenge}
+					>
+						Play next challenge
+					</button>
+				);
 			case GameStatus.LOST: {
 				return (
 					<button
-						onClick={() => {
-							/* TODO */
-						}}
+						onClick={resetGame}
 					>
 						Play Again
 					</button>

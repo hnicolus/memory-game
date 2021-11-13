@@ -19,8 +19,11 @@ function GameSession({
 	challengeSeconds,
 	playSeconds,
 	maxWrongAttempts,
+	autoStart,
+	resetGame,
+	nextChallenge
 }) {
-	const [gameStatus, setGameStatus] = useState(GameStatus.NEW);
+	const [gameStatus, setGameStatus] = useState(autoStart ? GameStatus.CHALLENGE : GameStatus.NEW);
 	const [pickedCellIds, setPickedCellIds] = useState([]);
 	const [countdown, setCountdown] = useState(playSeconds);
 
@@ -85,6 +88,9 @@ function GameSession({
 				gameStatus={gameStatus}
 				startGame={() => setGameStatus(GameStatus.CHALLENGE)}
 				countdown={countdown}
+				resetGame={resetGame}
+				nextChallenge={nextChallenge}
+
 			/>
 		</div>
 	);
