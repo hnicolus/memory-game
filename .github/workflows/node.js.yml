@@ -25,6 +25,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: ./node-app/yarn.lock
     - run: npm run deploy
       working-directory: './react'
