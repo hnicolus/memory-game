@@ -1,5 +1,5 @@
 # memory-game
-An Block Memory Game , built with Javascript, HTML,CSS and React
+A Block Memory Game , built with Javascript, HTML,CSS and React
 Live site : [Memory Game](https://hnicolus.github.io/memory-game/)
 ## Project Requirements
   - [NodeJS](https://nodejs.org/en/download/)
